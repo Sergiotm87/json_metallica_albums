@@ -2,6 +2,8 @@
 
 Tratamiento de JSON en python con datos de los primeros albumes de Metallica
 
+Datos tomados de la api de Last.fm
+
   Enunciados a resolver
 
 - Listar información: 
@@ -24,3 +26,6 @@ Introduce el nombre de un album, indica cuales albumes han sido reproducidos má
 
 Introduce un año, indica si algun album fue publicado en esa fecha (nota: los años de publicación están entre 1983 y 1988)
 
+enlaces:
+
+http://www.last.fm/api
