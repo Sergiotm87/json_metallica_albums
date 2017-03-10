@@ -11,10 +11,10 @@ tema=raw_input("introduce el nombre de una cancion: ")
 
 #recorremos el json en busca de estas canciones y tomamos el nombre del album correspondiente
 
-
+album=" "
 for elem in data:
     for cancion in elem["album"]["tracks"]["track"]:
-        print cancion["name"]
+        if cancion["name"]==tema:
+            album=elem["album"]["name"]
 
-
-#print "La cancion",tema,"pertenece al album",album
+print "\nLa cancion",tema,"pertenece al album",album
