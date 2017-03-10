@@ -11,9 +11,22 @@ album=raw_input("Introduce el nombre de un album: ")
 
 #tomamos el numero de reproducciones de las canciones del album introducido
 
+listareproducciones=[]
+listacanciones=[]
+
 for elem in data:
     if elem["album"]["name"]==album:
         for cancion in elem["album"]["tracks"]["track"]:
-            print cancion["streamable"]["playcount"]
+            listareproducciones.append(cancion["streamable"]["playcount"])
+            listacanciones.append(cancion["name"])
+
 
 #pedimos por teclado cuantos resultados quiere mostrar y lo mostramos
+
+resultado=int(raw_input("¿cuantos resultados quieres mostrar?: \n"))
+
+if resultado<len(listacanciones):
+    for i,j in zip(listacanciones[0:resultado],listareproducciones[0:resultado]):
+        print i+":",j,"reproducciones"
+
+#falta ordenar listas
